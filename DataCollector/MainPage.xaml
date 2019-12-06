@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="DataCollector.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DataCollector"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="46,61,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <CheckBox x:Name="metricCheckBox" Content="Metric" HorizontalAlignment="Left" Margin="1339,67,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="20,139,0,0" Text="q" TextWrapping="Wrap" VerticalAlignment="Top" Height="293" Width="707"/>
+        <Button x:Name="Button2" Content="RawDataTest" HorizontalAlignment="Left" Margin="848,55,0,0" VerticalAlignment="Top" Click="Button2_Click"/>
+        <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" Margin="967,182,0,0" Text="w" TextWrapping="Wrap" VerticalAlignment="Top" Height="225" Width="403"/>
+
+    </Grid>
+</Page>
