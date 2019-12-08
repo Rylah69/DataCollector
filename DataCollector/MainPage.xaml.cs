@@ -22,26 +22,26 @@ namespace DataCollector
         public MainPage()
         {
             this.InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             TextBlock1.Text = "";
-            int[] displayData = myMLD.GetRawData();
-            string textDisplay = "";
-
-            for (int i = 0; i < displayData.Length; i++)
-            {
-                textDisplay += displayData[i].ToString() + " ";
-            }
-            TextBlock1.Text = textDisplay;
-
+            TextBlock1.Text = myMLD.ImperialValue();
         }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-            int x = myMLD.MetricValue();
-            TextBlock2.Text = x.ToString();
+            TextBlock2.Text = "";
+            TextBlock2.Text = myMLD.MetricValue();
+        }
+
+        private void GetSingleMeasurement_Click(object sender, RoutedEventArgs e)
+        {
+            singleMeasuretextBlock.Text = "";
+
+            singleMeasuretextBlock.Text = myMLD.GetMostRecentMeasure().ToString();
 
         }
     }

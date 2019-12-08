@@ -25,7 +25,7 @@ namespace DataCollector
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
             () =>
             {
-                data = rnd.Next(-100, 101);
+                data = rnd.Next(50, 181);
                 myQueue.Enqueue(data);
             });
         }

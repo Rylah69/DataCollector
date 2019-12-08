@@ -8,10 +8,9 @@ namespace DataCollector
 {
     interface IMeasuringDevice
     {
-        decimal MetricValue();
-        decimal ImperialValue();
-        void StartCollecting();
-        void StopCollecting();
+        string MetricValue();
+        string ImperialValue();
         int[] GetRawData();
+        int GetMostRecentMeasure();
     }
 }

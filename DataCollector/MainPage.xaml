@@ -9,11 +9,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="46,61,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <CheckBox x:Name="metricCheckBox" Content="Metric" HorizontalAlignment="Left" Margin="1339,67,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="20,139,0,0" Text="q" TextWrapping="Wrap" VerticalAlignment="Top" Height="293" Width="707"/>
-        <Button x:Name="Button2" Content="RawDataTest" HorizontalAlignment="Left" Margin="848,55,0,0" VerticalAlignment="Top" Click="Button2_Click"/>
-        <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" Margin="967,182,0,0" Text="w" TextWrapping="Wrap" VerticalAlignment="Top" Height="225" Width="403"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="53,26,0,0" VerticalAlignment="Top" Click="Button_Click" Width="97" Height="36"/>
+        <CheckBox x:Name="metricCheckBox" Content="Metric" HorizontalAlignment="Left" Margin="1149,20,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="53,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="135" Width="702" Text="0"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="890,19,0,0" VerticalAlignment="Top" Click="Button2_Click" Height="41" Width="97"/>
+        <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" Margin="890,94,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="144" Width="488"/>
+        <Button x:Name="getSingleMeasurement" Content="Get Measurement" HorizontalAlignment="Left" Margin="53,274,0,0" VerticalAlignment="Top" Height="35" Width="96" Click="GetSingleMeasurement_Click"/>
+        <TextBlock x:Name="singleMeasuretextBlock" HorizontalAlignment="Left" Margin="185,277,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="102"/>
 
     </Grid>
 </Page>

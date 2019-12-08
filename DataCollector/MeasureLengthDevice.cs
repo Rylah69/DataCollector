@@ -10,7 +10,7 @@ using Windows.UI.Core;
 
 namespace DataCollector
 {
-    class MeasureLengthDevice 
+    class MeasureLengthDevice : IMeasuringDevice
     {
         private Queue<int> dataCaptured;
         private int? mostRecentMeasure;
@@ -49,14 +49,37 @@ namespace DataCollector
             });
         }
         //public int GetMeasurement => data;
-        public int MetricValue()
+        public string MetricValue()
+        {
+            int[] displayData = this.GetRawData();
+            string textDisplay = "";
+
+            for(int i = 0; i < displayData.Length; i++)
+            {
+                textDisplay += displayData[i].ToString() + "kph ";
+            }
+
+            return textDisplay;
+        }
+        public string ImperialValue()
+        {
+            int[] displayData = this.GetRawData();
+            string textDisplay = "";
+            double num1 = 0;
+            for (int i = 0; i < displayData.Length; i++)
+            {
+                num1 = displayData[i] * .6214;      //.6214
+                num1 = Math.Ceiling(num1);
+                textDisplay += num1.ToString() + "mph ";
+            }
+
+            return textDisplay;
+        }
+        public int GetMostRecentMeasure()
         {
             return (int)this.mostRecentMeasure;
         }
-        public int ImperialValue()
-        {
-            return (int)this.mostRecentMeasure;
-        }
+
         public int[] GetRawData()
         {
             Queue<int> clone = new Queue<int>(dataCaptured);
