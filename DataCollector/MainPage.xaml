@@ -11,11 +11,11 @@
     <Grid>
         <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="53,26,0,0" VerticalAlignment="Top" Click="Button_Click" Width="97" Height="36"/>
         <CheckBox x:Name="metricCheckBox" Content="Metric" HorizontalAlignment="Left" Margin="1149,20,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="53,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="135" Width="702" Text="0"/>
+        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="53,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="135" Width="702" Text="{Binding DisplayArray}"/>
         <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="890,19,0,0" VerticalAlignment="Top" Click="Button2_Click" Height="41" Width="97"/>
-        <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" Margin="890,94,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="144" Width="488"/>
+        <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" Margin="890,94,0,0" Text="{Binding DisplayArrayImperial}" TextWrapping="Wrap" VerticalAlignment="Top" Height="144" Width="488"/>
         <Button x:Name="getSingleMeasurement" Content="Get Measurement" HorizontalAlignment="Left" Margin="53,274,0,0" VerticalAlignment="Top" Height="35" Width="96" Click="GetSingleMeasurement_Click"/>
-        <TextBlock x:Name="singleMeasuretextBlock" HorizontalAlignment="Left" Margin="185,277,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="102"/>
+        <TextBlock x:Name="singleMeasuretextBlock" HorizontalAlignment="Left" Margin="185,277,0,0" Text="{Binding Kph}" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="102"/>
 
     </Grid>
 </Page>
